@@ -1125,12 +1125,16 @@ img { display: block; max-width: 100%; }
   .gallery { padding: 3rem 0; }
   .gallery__grid {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 150px 150px 150px;
+    grid-template-rows: repeat(3, 160px);
     padding: 0 1rem;
     gap: 0.5rem;
   }
-  .gallery__item--wide { grid-column: span 2; }
+  .gallery__item--wide { grid-column: span 1; }
   .gallery__item--tall { grid-row: span 1; }
+  .gallery__grid .gallery__item:last-child {
+    grid-column: span 2;
+    height: 160px;
+  }
 
   /* Quote */
   .quote { padding: 4rem 0; }
