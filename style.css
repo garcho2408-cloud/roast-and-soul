@@ -544,8 +544,8 @@ img { display: block; max-width: 100%; }
 
 .menu__card {
   display: flex;
-  align-items: center;
-  gap: 1.2rem;
+  align-items: flex-start;
+  gap: 1rem;
   padding: 1.4rem 0;
   border-bottom: 1px solid var(--border);
   transition: var(--transition);
@@ -555,11 +555,12 @@ img { display: block; max-width: 100%; }
 .menu__card:hover .menu__card-top h3 { color: var(--gold); }
 
 .menu__card-icon {
-  font-size: 2rem;
+  font-size: 1.8rem;
   line-height: 1;
   flex-shrink: 0;
-  width: 2.8rem;
+  width: 2.4rem;
   text-align: center;
+  padding-top: 0.1rem;
 }
 
 .menu__card-body { flex: 1; min-width: 0; }
@@ -568,22 +569,22 @@ img { display: block; max-width: 100%; }
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  gap: 0.5rem;
-  margin-bottom: 0.3rem;
+  gap: 0.8rem;
+  margin-bottom: 0.35rem;
 }
 .menu__card-top h3 {
   font-family: 'Playfair Display', serif;
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   font-weight: 600;
   color: var(--cream);
   transition: color 0.2s;
 }
 .menu__price {
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   font-weight: 700;
   color: var(--gold);
   flex-shrink: 0;
-  letter-spacing: 0.02em;
+  white-space: nowrap;
 }
 
 .menu__card p {
