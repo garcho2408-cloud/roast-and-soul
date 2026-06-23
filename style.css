@@ -1,24 +1,27 @@
 /* ===== RESET & BASE ===== */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-/* ===== SCROLL SNAP ===== */
-html {
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  height: 100%;
-  scroll-behavior: smooth;
-}
-body { height: 100%; }
+/* ===== SCROLL SNAP (только десктоп) ===== */
+html { scroll-behavior: smooth; }
 
-section {
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-  min-height: 100vh;
-}
+@media (min-width: 641px) {
+  html {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100%;
+  }
+  body { height: 100%; }
 
-footer {
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
+  section {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    min-height: 100vh;
+  }
+
+  footer {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
 }
 
 
