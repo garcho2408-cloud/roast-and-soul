@@ -60,11 +60,28 @@ burger.addEventListener('click', () => {
   burger.classList.toggle('open');
   navLinks.classList.toggle('open');
 });
+function closeMenu() {
+  burger.classList.remove('open');
+  navLinks.classList.remove('open');
+}
+
+// Закрыть по клику на ссылку
 navLinks.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    burger.classList.remove('open');
-    navLinks.classList.remove('open');
-  });
+  link.addEventListener('click', closeMenu);
+});
+
+// Закрыть по клику вне меню
+document.addEventListener('click', (e) => {
+  if (navLinks.classList.contains('open') &&
+      !navLinks.contains(e.target) &&
+      !burger.contains(e.target)) {
+    closeMenu();
+  }
+});
+
+// Закрыть по Escape
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeMenu();
 });
 
 // Intersection Observer — fade animations
