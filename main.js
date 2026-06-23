@@ -145,6 +145,30 @@ document.addEventListener('keydown', e => {
   if (e.key === 'ArrowLeft')  showPhoto(currentPhoto - 1);
 });
 
+// ===== WELCOME POPUP =====
+const wpopup = document.getElementById('welcomePopup');
+
+function closeWpopup() {
+  wpopup.classList.remove('open');
+  localStorage.setItem('rs_popup_seen', '1');
+}
+
+if (!localStorage.getItem('rs_popup_seen')) {
+  setTimeout(() => wpopup.classList.add('open'), 1200);
+}
+
+document.getElementById('wpopupClose').addEventListener('click', closeWpopup);
+document.getElementById('wpopupSkip').addEventListener('click', closeWpopup);
+wpopup.addEventListener('click', e => { if (e.target === wpopup) closeWpopup(); });
+
+document.getElementById('wpopupForm').addEventListener('submit', e => {
+  e.preventDefault();
+  const btn = e.target.querySelector('.wpopup__btn');
+  btn.textContent = 'Готово! Скидка на почте ✓';
+  btn.style.background = '#4a9c6a';
+  setTimeout(closeWpopup, 1500);
+});
+
 // Contact form
 document.getElementById('contactForm').addEventListener('submit', e => {
   e.preventDefault();
