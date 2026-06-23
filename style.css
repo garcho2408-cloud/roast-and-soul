@@ -200,6 +200,37 @@ img { display: block; max-width: 100%; }
 .nav__burger.open span:nth-child(2) { opacity: 0; }
 .nav__burger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px,-5px); }
 
+.nav__close {
+  display: none;
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--cream);
+  font-size: 1rem;
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+.nav__close:hover { background: var(--gold); border-color: var(--gold); color: var(--bg); }
+
+.nav__overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 99;
+}
+.nav__overlay.open { display: block; }
+
+@media (max-width: 640px) {
+  .nav__close { display: flex; }
+}
+
 /* ===== HERO ===== */
 .hero {
   position: relative;

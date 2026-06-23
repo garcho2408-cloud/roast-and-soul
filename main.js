@@ -56,33 +56,28 @@ if (heroBg) heroBg.classList.add('loaded');
 // Burger menu
 const burger = document.getElementById('burger');
 const navLinks = document.getElementById('navLinks');
-burger.addEventListener('click', () => {
-  burger.classList.toggle('open');
-  navLinks.classList.toggle('open');
-});
+const navOverlay = document.getElementById('navOverlay');
+const navClose = document.getElementById('navClose');
+
 function closeMenu() {
   burger.classList.remove('open');
   navLinks.classList.remove('open');
+  navOverlay.classList.remove('open');
 }
 
-// Закрыть по клику на ссылку
-navLinks.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', closeMenu);
+function openMenu() {
+  burger.classList.add('open');
+  navLinks.classList.add('open');
+  navOverlay.classList.add('open');
+}
+
+burger.addEventListener('click', () => {
+  navLinks.classList.contains('open') ? closeMenu() : openMenu();
 });
 
-// Закрыть по клику вне меню
-document.addEventListener('click', (e) => {
-  if (navLinks.classList.contains('open') &&
-      !navLinks.contains(e.target) &&
-      !burger.contains(e.target)) {
-    closeMenu();
-  }
-});
-
-// Закрыть по Escape
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') closeMenu();
-});
+navClose.addEventListener('click', closeMenu);
+navOverlay.addEventListener('click', closeMenu);
+navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
 
 // Intersection Observer — fade animations
 const observer = new IntersectionObserver((entries) => {
