@@ -1065,10 +1065,35 @@ img { display: block; max-width: 100%; }
   .about__stat-num { font-size: 1.8rem; }
 
   /* Menu */
-  .menu { padding: 4rem 0; }
-  .menu__grid { grid-template-columns: 1fr; }
-  .menu__tabs { gap: 0.4rem; }
-  .menu__tab { padding: 0.5rem 1rem; font-size: 0.72rem; }
+  .menu { padding: 3rem 0; }
+  .menu__grid { grid-template-columns: 1fr; gap: 1rem; }
+
+  .menu__tabs {
+    gap: 0.5rem;
+    justify-content: flex-start;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 0.3rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .menu__tabs::-webkit-scrollbar { display: none; }
+  .menu__tab {
+    padding: 0.55rem 1.1rem;
+    font-size: 0.75rem;
+    flex-shrink: 0;
+  }
+
+  .menu__card {
+    padding: 1.4rem;
+    gap: 1rem;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .menu__card-icon { font-size: 1.6rem; }
+  .menu__card-top h3 { font-size: 1rem; }
+  .menu__card p { font-size: 0.88rem; margin-bottom: 0.6rem; }
+  .menu__price { font-size: 1rem; }
 
   /* Gallery */
   .gallery { padding: 4rem 0; }

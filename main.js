@@ -25,15 +25,17 @@ window.addEventListener('wheel', (e) => {
   scrollToSection(e.deltaY > 0 ? idx + 1 : idx - 1);
 }, { passive: true });
 
-// Свайп
-let touchStartY = null;
-window.addEventListener('touchstart', e => { touchStartY = e.touches[0].clientY; }, { passive: true });
-window.addEventListener('touchend', e => {
-  if (touchStartY === null) return;
-  const diff = touchStartY - e.changedTouches[0].clientY;
-  if (Math.abs(diff) > 50) scrollToSection(getCurrentIndex() + (diff > 0 ? 1 : -1));
-  touchStartY = null;
-}, { passive: true });
+// Свайп — только на десктопе, на мобильном нативный скролл
+if (window.innerWidth >= 641) {
+  let touchStartY = null;
+  window.addEventListener('touchstart', e => { touchStartY = e.touches[0].clientY; }, { passive: true });
+  window.addEventListener('touchend', e => {
+    if (touchStartY === null) return;
+    const diff = touchStartY - e.changedTouches[0].clientY;
+    if (Math.abs(diff) > 50) scrollToSection(getCurrentIndex() + (diff > 0 ? 1 : -1));
+    touchStartY = null;
+  }, { passive: true });
+}
 
 // Клавиатура
 window.addEventListener('keydown', e => {
