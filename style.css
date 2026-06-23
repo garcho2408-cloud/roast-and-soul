@@ -1218,7 +1218,7 @@ img { display: block; max-width: 100%; }
 .wpopup.open .wpopup__inner { transform: translateY(0); }
 
 .wpopup__img {
-  background: url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&q=80') center/cover no-repeat;
+  background: url('https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=800&q=80') center/cover no-repeat;
   min-height: 420px;
 }
 
