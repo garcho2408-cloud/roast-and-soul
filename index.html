@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ROAST & SOUL — Авторский кофе</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <a href="#hero" class="nav__logo">ROAST <span>&</span> SOUL</a>
+    <button class="nav__burger" id="burger" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav__links" id="navLinks">
+      <li><a href="#about">О нас</a></li>
+      <li><a href="#menu">Меню</a></li>
+      <li><a href="#gallery">Галерея</a></li>
+      <li><a href="#contact">Контакты</a></li>
+      <li><a href="#contact" class="nav__cta">Посетить нас</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero__bg"></div>
+    <div class="hero__overlay"></div>
+    <div class="hero__content fade-up">
+      <p class="hero__eyebrow">Осн. 2019 · Авторский кофе</p>
+      <h1 class="hero__title">Где каждый<br /><em>глоток</em><br />— история.</h1>
+      <p class="hero__sub">Тщательно отобранные зёрна. Медленное приготовление.<br />Место, где чувствуешь себя как дома.</p>
+      <div class="hero__actions">
+        <a href="#menu" class="btn btn--primary">Смотреть меню</a>
+        <a href="#about" class="btn btn--ghost">Наша история</a>
+      </div>
+    </div>
+    <div class="hero__stamp">
+      <svg viewBox="0 0 100 100" class="hero__stamp-ring">
+        <path id="circle" d="M 50,50 m -37,0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="none"/>
+        <text><textPath href="#circle" startOffset="0%">АВТОРСКИЙ КОФЕ · EST. 2019 · BROOKLYN ·</textPath></text>
+      </svg>
+      <div class="hero__stamp-center">
+        <span class="hero__stamp-num">5+</span>
+        <span class="hero__stamp-label">лет</span>
+      </div>
+    </div>
+    <div class="hero__scroll">
+      <span>Листать</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about__grid">
+        <div class="about__visual fade-left">
+          <div class="about__img-wrap">
+            <div class="about__img about__img--1"></div>
+            <div class="about__img about__img--2"></div>
+          </div>
+        </div>
+        <div class="about__text fade-right">
+          <p class="section-eyebrow">Наша история</p>
+          <h2 class="section-title">Кофе — это не просто<br />напиток. Это ритуал.</h2>
+          <p class="about__desc">Рождённые из любви к неспешным утрам и честным вкусам, Roast & Soul открыли свои двери в 2019 году с простой идеей: хороший кофе должен быть личным, а не торопливым.</p>
+          <p class="about__desc">Мы закупаем зёрна моносортов напрямую у фермеров из Эфиопии, Колумбии и Гватемалы — обжариваем небольшими партиями каждую неделю, чтобы сохранить каждую ноту.</p>
+          <div class="about__stats">
+            <div class="about__stat">
+              <span class="about__stat-num">12+</span>
+              <span class="about__stat-label">Происхождений</span>
+            </div>
+            <div class="about__stat">
+              <span class="about__stat-num">3</span>
+              <span class="about__stat-label">Профиля обжарки</span>
+            </div>
+            <div class="about__stat">
+              <span class="about__stat-num">40к</span>
+              <span class="about__stat-label">Подано чашек</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section class="menu" id="menu">
+    <div class="container">
+      <div class="section-header fade-up">
+        <p class="section-eyebrow">Что мы готовим</p>
+        <h2 class="section-title">Наше меню</h2>
+      </div>
+      <div class="menu__tabs fade-up">
+        <button class="menu__tab active" data-tab="espresso">Эспрессо</button>
+        <button class="menu__tab" data-tab="filter">Фильтр</button>
+        <button class="menu__tab" data-tab="cold">Колд брю</button>
+        <button class="menu__tab" data-tab="food">Еда</button>
+      </div>
+
+      <div class="menu__panel active" data-panel="espresso">
+        <div class="menu__grid">
+          <div class="menu__card">
+            <div class="menu__card-icon">☕</div>
+            <div class="menu__card-body">
+              <div class="menu__card-top">
+                <h3>Эспрессо</h3>
+                <span class="menu__price">320 ₽</span>
+              </div>
+              <p>Чистый концентрированный шот — насыщенный, интенсивный, с бархатистой крема.</p>
+              <span class="menu__tag">Моносорт</span>
+            </div>
+          </div>
+          <div class="menu__card">
+            <div class="menu__card-icon">🥛</div>
+            <div class="menu__card-body">
+              <div class="menu__card-top">
+                <h3>Флэт Уайт</h3>
+                <span class="menu__price">450 ₽</span>
+              </div>
+              <p>Двойной ристретто с шелковистым микропенным молоком. Любимец гостей.</p>
+              <span class="menu__tag">Хит продаж</span>
+            </div>
+          </div>
+          <div class="menu__card">
+            <div class="menu__card-icon">✨</div>
+            <div class="menu__card-body">
+              <div class="menu__card-top">
+                <h3>Кортадо</h3>
+                <span class="menu__price">410 ₽</span>
+              </div>
+              <p>Равные части эспрессо и тёплого молока. Смелый, но сбалансированный.</p>
+              <span class="menu__tag">Выбор бариста</span>
+            </div>
+          </div>
+          <div class="menu__card">
+            <div class="menu__card-icon">🍫</div>
+            <div class="menu__card-body">
+              <div class="menu__card-top">
+                <h3>Мокко</h3>
+                <span class="menu__price">490 ₽</span>
+              </div>
+              <p>Эспрессо с тёмным какао и овсяным молоком. Настоящее удовольствие.</p>
+              <span class="menu__tag">Сезонный</span>
+            </div>
+          </div>
+          <div class="menu__card">
+            <div class="menu__card-icon">🌿</div>
+            <div class="menu__card-body">
+              <div class="menu__card-top">
+                <h3>Матча Латте</h3>
+                <span class="menu__price">490 ₽</span>
+              </div>
+              <p>Церемониальный матча с овсяным молоком. Спокойная энергия без кофе.</p>
+              <span class="menu__tag">Без кофеина</span>
+            </div>
+          </div>
+          <div class="menu__card">
+            <div class="menu__card-icon">🧡</div>
+            <div class="menu__card-body">
+              <div class="menu__card-top">
+                <h3>Капучино</h3>
+                <span class="menu__price">410 ₽</span>
+              </div>
+              <p>Классическая пенка, классический вкус. Вне времени и всегда в балансе.</p>
+              <span class="menu__tag">Классика</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu__panel" data-panel="filter">
+        <div class="menu__grid">
+          <div class="menu__card">
+            <div class="menu__card-icon">🫖</div>
+            <div class="menu__card-body">
+              <div class="menu__card-top">
+                <h3>Пуровер</h3>
+                <span class="menu__price">520 ₽</span>
+              </div>
+              <p>Медленная капельная точность. Цветочные ноты, фруктовость, чистое послевкусие.</p>
+              <span class="menu__tag">Эфиопия · Йиргачеффе</span>
+            </div>
+          </div>
+          <div class="menu__card">
+            <div class="menu__card-icon">🌊</div>
+            <div class="menu__card-body">
+              <div class="menu__card-top">
+                <h3>Аэропресс</h3>
+                <span class="menu__price">480 ₽</span>
+              </div>
+              <p>Мягкий, насыщенный, с низкой кислотностью. Удивительно многогранный.</p>
+              <span class="menu__tag">Колумбия · Уила</span>
+            </div>
+          </div>
+          <div class="menu__card">
+            <div class="menu__card-icon">⚗️</div>
+            <div class="menu__card-body">
+              <div class="menu__card-top">
+                <h3>Кемекс</h3>
+                <span class="menu__price">560 ₽</span>
+              </div>
+              <p>Кристально чистый, чайная текстура. Яркая кислотность со сладкими нотами.</p>
+              <span class="menu__tag">Гватемала · Антигуа</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu__panel" data-panel="cold">
+        <div class="menu__grid">
+          <div class="menu__card">
+            <div class="menu__card-icon">🧊</div>
+            <div class="menu__card-body">
+              <div class="menu__card-top">
+                <h3>Колд Брю</h3>
+                <span class="menu__price">480 ₽</span>
+              </div>
+              <p>18 часов настаивания. Тёмный шоколад, коричневый сахар, ноль горечи.</p>
+              <span class="menu__tag">350 мл</span>
+            </div>
+          </div>
+          <div class="menu__card">
+            <div class="menu__card-icon">🍦</div>
+            <div class="menu__card-body">
+              <div class="menu__card-top">
+                <h3>Нитро Колд Брю</h3>
+                <span class="menu__price">560 ₽</span>
+              </div>
+              <p>Насыщен азотом для кремовой, каскадной подачи. Молоко не нужно.</p>
+              <span class="menu__tag">На кране</span>
+            </div>
+          </div>
+          <div class="menu__card">
+            <div class="menu__card-icon">🍊</div>
+            <div class="menu__card-body">
+              <div class="menu__card-top">
+                <h3>Эспрессо Тоник</h3>
+                <span class="menu__price">430 ₽</span>
+              </div>
+              <p>Двойной шот поверх тоника и льда. Освежающий и неожиданный.</p>
+              <span class="menu__tag">Летний спешл</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu__panel" data-panel="food">
+        <div class="menu__grid">
+          <div class="menu__card">
+            <div class="menu__card-icon">🥐</div>
+            <div class="menu__card-body">
+              <div class="menu__card-top">
+                <h3>Круассан с маслом</h3>
+                <span class="menu__price">350 ₽</span>
+              </div>
+              <p>Слоистый, золотистый, каждый день свежий. Идеально к утреннему эспрессо.</p>
+              <span class="menu__tag">Свежая выпечка</span>
+            </div>
+          </div>
+          <div class="menu__card">
+            <div class="menu__card-icon">🍰</div>
+            <div class="menu__card-body">
+              <div class="menu__card-top">
+                <h3>Кофейный кекс</h3>
+                <span class="menu__price">480 ₽</span>
+              </div>
+              <p>Сочный бисквит с эспрессо, корицей и глазурью из коричневого масла.</p>
+              <span class="menu__tag">Фирменное</span>
+            </div>
+          </div>
+          <div class="menu__card">
+            <div class="menu__card-icon">🫙</div>
+            <div class="menu__card-body">
+              <div class="menu__card-top">
+                <h3>Овсянка ночная</h3>
+                <span class="menu__price">520 ₽</span>
+              </div>
+              <p>Овсяное молоко, чиа, сезонные фрукты, кленовый сироп. Лёгко и питательно.</p>
+              <span class="menu__tag">Веганское</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery" id="gallery">
+    <div class="container">
+      <div class="section-header fade-up">
+        <p class="section-eyebrow">Атмосфера</p>
+        <h2 class="section-title">Здесь начинается твоё утро.</h2>
+      </div>
+    </div>
+    <div class="gallery__grid fade-up">
+      <div class="gallery__item gallery__item--tall">
+        <div class="gallery__img g1"></div>
+        <div class="gallery__caption">Утренний свет</div>
+      </div>
+      <div class="gallery__item">
+        <div class="gallery__img g2"></div>
+        <div class="gallery__caption">Налив</div>
+      </div>
+      <div class="gallery__item">
+        <div class="gallery__img g3"></div>
+        <div class="gallery__caption">Латте-арт</div>
+      </div>
+      <div class="gallery__item gallery__item--wide">
+        <div class="gallery__img g4"></div>
+        <div class="gallery__caption">Наше пространство</div>
+      </div>
+      <div class="gallery__item">
+        <div class="gallery__img g5"></div>
+        <div class="gallery__caption">Зёрна и мастерство</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUES -->
+  <section class="values">
+    <div class="values__bg"></div>
+    <div class="values__overlay"></div>
+    <div class="container values__inner">
+      <div class="values__header fade-up">
+        <p class="section-eyebrow">Почему мы</p>
+        <h2 class="values__title">Три принципа<br /><em>которым мы верны</em></h2>
+      </div>
+      <div class="values__grid">
+        <div class="values__card fade-up">
+          <div class="values__card-num">01</div>
+          <div class="values__card-body">
+            <h3>Происхождение</h3>
+            <p>Мы знаем имя каждого фермера. Зёрна закупаются напрямую — без посредников, без компромиссов по качеству.</p>
+          </div>
+        </div>
+        <div class="values__card fade-up">
+          <div class="values__card-num">02</div>
+          <div class="values__card-body">
+            <h3>Обжарка</h3>
+            <p>Малые партии. Еженедельный ростер. Каждый профиль обжарки разработан вручную, чтобы раскрыть характер зерна.</p>
+          </div>
+        </div>
+        <div class="values__card fade-up">
+          <div class="values__card-num">03</div>
+          <div class="values__card-body">
+            <h3>Подача</h3>
+            <p>Температура, время, давление — ничего случайного. Каждая чашка — это результат внимания к деталям.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact__grid">
+        <div class="contact__info fade-left">
+          <p class="section-eyebrow">Найти нас</p>
+          <h2 class="section-title">Приди за кофе.<br />Останься ради ощущения.</h2>
+          <div class="contact__details">
+            <div class="contact__item">
+              <span class="contact__icon">📍</span>
+              <div>
+                <strong>Адрес</strong>
+                <p>ул. Ember Lane, 42, Brooklyn, NY 11201</p>
+              </div>
+            </div>
+            <div class="contact__item">
+              <span class="contact__icon">🕐</span>
+              <div>
+                <strong>Часы работы</strong>
+                <p>Пн – Пт: 7:00 – 19:00</p>
+                <p>Сб – Вс: 8:00 – 18:00</p>
+              </div>
+            </div>
+            <div class="contact__item">
+              <span class="contact__icon">📞</span>
+              <div>
+                <strong>Телефон</strong>
+                <p>+7 901 541 01 80</p>
+              </div>
+            </div>
+            <div class="contact__item">
+              <span class="contact__icon">✉️</span>
+              <div>
+                <strong>Почта</strong>
+                <p>chobanyanayk@gmail.com</p>
+              </div>
+            </div>
+          </div>
+          <div class="contact__social">
+            <a href="#" class="social-btn">Instagram</a>
+            <a href="#" class="social-btn">VK</a>
+            <a href="#" class="social-btn">TikTok</a>
+          </div>
+        </div>
+        <div class="contact__form-wrap fade-right">
+          <form class="contact__form" id="contactForm">
+            <h3>Написать нам</h3>
+            <div class="form__group">
+              <input type="text" placeholder="Ваше имя" required />
+            </div>
+            <div class="form__group">
+              <input type="email" placeholder="Ваш email" required />
+            </div>
+            <div class="form__group">
+              <select>
+                <option value="" disabled selected>Тема обращения</option>
+                <option>Бронирование стола</option>
+                <option>Оптовые закупки</option>
+                <option>Аренда площадки</option>
+                <option>Общий вопрос</option>
+              </select>
+            </div>
+            <div class="form__group">
+              <textarea placeholder="Ваше сообщение" rows="4"></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full">Отправить сообщение</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <span class="footer__logo">ROAST <em>&</em> SOUL</span>
+          <p>Авторский кофе, приготовленный с душой.</p>
+        </div>
+        <div class="footer__nav">
+          <h4>Навигация</h4>
+          <ul>
+            <li><a href="#about">О нас</a></li>
+            <li><a href="#menu">Меню</a></li>
+            <li><a href="#gallery">Галерея</a></li>
+            <li><a href="#contact">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav">
+          <h4>Мы в соцсетях</h4>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">VK</a></li>
+            <li><a href="#">TikTok</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2025 Roast & Soul. Все права защищены.</p>
+        <p>Сделано с ♥ и слишком большим количеством эспрессо.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL -->
+  <div class="modal" id="modal">
+    <button class="modal__close" id="modalClose">✕</button>
+    <button class="modal__prev" id="modalPrev">&#8592;</button>
+    <button class="modal__next" id="modalNext">&#8594;</button>
+    <div class="modal__img" id="modalImg"></div>
+    <p class="modal__caption" id="modalCaption"></p>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
